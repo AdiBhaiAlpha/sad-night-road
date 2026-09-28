@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="A lonely person walking down an empty road at midnight — an interactive cinematic short film." />
+  <meta name="theme-color" content="#04060b" />
+  <title>Sad Night Road — a short cinematic film</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+</head>
+<body>
+  <a class="skip" href="#stage">Skip to film</a>
+
+  <main id="app">
+    <div id="intro" role="button" tabindex="0" aria-label="Press Enter to begin the film with sound.">
+      <div class="intro-inner">
+        <p class="intro-kicker">an interactive short film</p>
+        <h1 class="intro-title">SAD NIGHT ROAD</h1>
+        <p class="intro-press" aria-hidden="true"><span class="pulse-dot"></span>Enter</p>
+        <p class="intro-hint">headphones recommended</p>
+      </div>
+    </div>
+
+    <section id="stage" aria-label="Cinematic short film: a lonely road at midnight">
+      <div id="shots">
+        <video class="shot" id="sh-road" src="./video/road.mp4" poster="./img/poster-road.jpg"
+          muted playsinline preload="auto" disablepictureinpicture></video>
+        <video class="shot" id="sh-walkfog" src="./video/walkfog.mp4" poster="./img/poster-walkfog.jpg"
+          muted playsinline preload="auto" disablepictureinpicture></video>
+        <video class="shot" id="sh-walk2" src="./video/walk2.mp4" poster="./img/poster-walk2.jpg"
+          muted playsinline preload="auto" loop disablepictureinpicture></video>
+        <div class="shot still" id="sh-tree"><img src="./img/tree.jpg" alt="" /></div>
+        <video class="shot" id="sh-sit" src="./video/sit.mp4" poster="./img/poster-sit.jpg"
+          muted playsinline preload="auto" loop disablepictureinpicture></video>
+        <video class="shot dark" id="sh-cry" src="./video/cry.mp4" poster="./img/poster-cry.jpg"
+          muted playsinline preload="auto" disablepictureinpicture></video>
+      </div>
+
+      <div class="grade cold" aria-hidden="true"></div>
+      <div class="grade warm" aria-hidden="true"></div>
+      <div id="exposure" aria-hidden="true"></div>
+      <div id="afterglow" aria-hidden="true"></div>
+      <div class="grade vignette" aria-hidden="true"></div>
+      <canvas id="grain" aria-hidden="true"></canvas>
+      <div class="letterbox top" aria-hidden="true"></div>
+      <div class="letterbox bottom" aria-hidden="true"></div>
+
+      <div id="caption" role="status" aria-live="polite"></div>
+
+      <div id="hud">
+        <button id="soundBtn" aria-label="Mute or unmute sound" title="Sound on/off">♪</button>
+        <button id="replayBtn" hidden aria-label="Replay the film">↺ <span>Replay</span></button>
+      </div>
+
+      <div id="endcard" aria-hidden="true">
+        <p id="endline">Some roads are walked alone.</p>
+        <p id="enddash">—</p>
+        <p id="credit">@the.dev.adi</p>
+      </div>
+      <div id="fadeblack" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

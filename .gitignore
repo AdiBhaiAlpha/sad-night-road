@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# build output (Vercel builds from source)
+/dist/
+
+# vercel
+.vercel/
+
+# logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
